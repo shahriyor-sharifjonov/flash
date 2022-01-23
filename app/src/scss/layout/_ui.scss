@@ -39,3 +39,14 @@ main{
         visibility: hidden;
     }
 }
+.title{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 125%;
+    color: #FFFFFF;    
+    margin-bottom: 15px;
+    @include media(576){
+        font-size: 28px;
+        line-height: 125%;
+    }
+}
