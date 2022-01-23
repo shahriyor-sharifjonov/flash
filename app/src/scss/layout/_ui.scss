@@ -17,10 +17,14 @@ body{
     object-fit: cover;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     color: #FFFFFF;  
+    @include media(1400){
+        background-size: auto 100%;
+    }
     @include media(992){
         background-image: url('../images/background-mb.png');
+        background-size: auto 100%;
     }
 }
 ul{
