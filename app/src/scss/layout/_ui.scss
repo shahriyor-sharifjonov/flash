@@ -58,3 +58,70 @@ main{
         line-height: 125%;
     }
 }
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000070;
+    z-index: 55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms ease-out;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+    &__body{
+        background: rgba(4, 16, 37, 0.4);
+        backdrop-filter: blur(15px);
+        border: 1px solid;
+        border-image-slice: 1;
+        max-width: 850px;
+        width: 100%;
+        border-image-source: linear-gradient(90deg, #5196FF 0.03%, #5846FF 50.57%, #2A00B9 100.03%);
+        padding: 150px 15px 100px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        max-height: 90%;
+        overflow-y: auto;
+        @include media(576){
+            padding: 100px 15px 50px 15px;
+        }
+    }
+    &__title{
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    &__logo{
+        margin-bottom: 50px;
+    }
+    &__close{
+        position: absolute;
+        top: 25px; 
+        right: 25px;
+        @include media(576){
+            top: 15px;
+            right: 15px;
+            svg{
+                width: 50px;
+            }
+        }
+    }
+    &__btn{
+        @include media(576){
+            font-size: 14px;
+            line-height: 125%;
+        }
+        &:not(:last-child){
+            margin-bottom: 25px;
+        }
+    }
+}

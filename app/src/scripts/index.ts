@@ -28,6 +28,18 @@ window.addEventListener('scroll', function(){
     });
 })
 
+// popup
+const popup = document.querySelector('.popup');
+const popupClose = document.querySelector('.popup__close');
+setTimeout(() => {
+  popup.classList.add('active')
+  document.body.style.overflowY = "hidden";
+}, 5000);
+popupClose.addEventListener('click', function(e){
+  popup.classList.remove('active');
+  document.body.style.overflowY = "auto";
+})
+
 
 $(document).ready(function() {
   $(".faq__item > .faq__item-btn").on("click", function() {
