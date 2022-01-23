@@ -33,6 +33,7 @@ a {
     text-decoration: none;
 }
 main{
+    transition: 200ms ease-out;
     &.open{
         opacity: 0;
         visibility: hidden;
