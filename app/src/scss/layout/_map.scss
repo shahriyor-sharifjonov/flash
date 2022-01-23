@@ -1,0 +1,58 @@
+.map{
+    margin-bottom: 200px;
+    @include media(576){
+        margin-bottom: 150px;
+    }
+    &__p{
+        font-size: 18px;
+        line-height: 175%;
+        color: #FFFFFF;
+        margin-bottom: 35px;
+    }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &__item{
+        width: calc(50% - 15px);
+        border: 1px solid;
+        border-image-source: linear-gradient(90deg, #5196FF 0.03%, #5846FF 50.57%, #2A00B9 100.03%);        
+        border-image-slice: 1;
+        background: rgba(81, 150, 255, 0.05);
+        backdrop-filter: blur(5px);
+        padding: 20px 30px;
+        @include media(992){
+            width: 100%;
+        }
+        @include media(576){
+            padding: 20px;
+        }
+        &-title{
+            font-size: 28px;
+            line-height: 150%;
+            color: #5196FF;            
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        &-row{
+            display: flex;
+            @include media(576){
+                flex-direction: column;
+            }
+        }
+        &-list{
+            list-style-type: disc;
+            padding-left: 18px;
+            &:first-child{
+                width: 248px;
+                margin-right: 50px;
+            }
+        }
+        &-li{
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+        }
+    }
+}
