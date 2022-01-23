@@ -1,3 +1,25 @@
 mixin header()
     header.header 
-        p header 
+        .header__body.container
+            a(href="index.html").header__logo 
+                img(src="images/logo.png", alt="")
+            button.header__button 
+                span.header__button-line
+            .header__menu 
+                ul.header__list
+                    li.header__li   
+                        a(href="#!").header__link COINMARKETCAP 
+                    li.header__li   
+                        a(href="#!").header__link DEX TOOLS 
+                    li.header__li   
+                        a(href="#!").header__link LITEPAPER 
+                    li.header__li   
+                        a(href="#!").header__link ROADMAP 
+                .header__right 
+                    a(href="#!").header__btn LIVE CHART 
+                    .header__social
+                        a(href="#!").header__social-item
+                            img(src="images/telegram.svg", alt="")   
+                        a(href="#!").header__social-item
+                            img(src="images/twitter.svg", alt="")   
+                            

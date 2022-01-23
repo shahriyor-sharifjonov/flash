@@ -4,22 +4,37 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-
+    font-family: 'Gotham', sans-serif;
     &:focus,
     &:active {
         outline: none;
     }
 }
-
+body{
+    min-height: 100vh;
+    background-color: #041025;
+    background-image: url('../images/background.png');
+    object-fit: cover;
+    background-position: top 100%;
+    background-repeat: no-repeat;
+    color: #FFFFFF;  
+}
+ul{
+    list-style-type: none;
+}
 button {
     font-family: inherit;
     cursor: pointer;
 }
-
 input {
     font-family: inherit;
 }
-
 a {
     text-decoration: none;
+}
+main{
+    &.open{
+        opacity: 0;
+        visibility: hidden;
+    }
 }
