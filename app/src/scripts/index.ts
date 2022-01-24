@@ -21,6 +21,13 @@ window.onclick = (e: MouseEvent) => {
     menuToggle();
 };
 
+document.addEventListener("DOMContentLoaded", function(){
+  let item = document.querySelectorAll('.fixed');
+  item.forEach(element => {
+    element.classList.toggle('sticky', window.scrollY > 0);
+  });
+})
+
 window.addEventListener('scroll', function(){
     let item = document.querySelectorAll('.fixed');
     item.forEach(element => {
